@@ -1,6 +1,7 @@
 #ifndef HEROE_H
 #define HEROE_H
 #include "Item.h"
+#include "Monstruo.h"
 #include <string>
 #include <fstream>
 

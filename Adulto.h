@@ -2,6 +2,7 @@
 #define ADULTO_H
 #include "Heroe.h"
 #include "Item.h"
+#include "Monstruo.h"
 #include <string>
 #include <fstream>
 
@@ -17,6 +18,7 @@ class Adulto: public Heroe{
     int getAtaque();
     int getEspecial();
     void write(ofstream&);
+  
 };
 
 #endif

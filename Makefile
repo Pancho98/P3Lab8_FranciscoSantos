@@ -1,13 +1,13 @@
 make.out: Heroe.o Joven.o Adulto.o Item.o Bumeran.o Arco.o Bomba.o Monstruo.o Jefes.o SemiJefe.o Comun.o Main.o
 	g++ Heroe.o Joven.o Adulto.o Item.o Bumeran.o Arco.o Bomba.o Monstruo.o Jefes.o SemiJefe.o Comun.o Main.o -o make.out
 
-Heroe.o: Heroe.h Heroe.cpp Item.h
+Heroe.o: Heroe.h Heroe.cpp Item.h Monstruo.h
 	g++ -c Heroe.cpp
 
-Joven.o: Joven.h Joven.cpp Heroe.o Item.o
+Joven.o: Joven.h Joven.cpp Heroe.o Item.o Monstruo.h
 	g++ -c Joven.cpp
 
-Adulto.o: Adulto.h Adulto.cpp Heroe.o Item.o
+Adulto.o: Adulto.h Adulto.cpp Heroe.o Item.o Monstruo.h
 	g++ -c Adulto.cpp
 
 Item.o: Item.h Item.cpp

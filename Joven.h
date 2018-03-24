@@ -2,6 +2,7 @@
 #define JOVEN_H
 #include "Heroe.h"
 #include "Item.h"
+#include "Monstruo.h"
 #include <string>
 #include <fstream>
 
@@ -17,6 +18,7 @@ class Joven:public Heroe{
     int getAtaque();
     int getEspecial();
     void write(ofstream&);
+    
 };
 
 #endif
