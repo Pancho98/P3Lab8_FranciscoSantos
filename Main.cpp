@@ -207,7 +207,13 @@ int main(int argc, char const *argv[]) {
         if (heroe->getDJefes()>=3) {
           int saludJ=heroe->getVida();
           string nombreJ1=heroe->getNombre();
-          Item* itemJ;
+          Item* itemJ=heroe->getItem();
+          int JefesD=heroe->getDJefes();
+          int rupias=heroe->getDinero();
+          heroe=new Adulto(nombreJ1, itemJ);
+          heroe->setVida(saludJ);
+          heroe->setDJefes(JefesD);
+          heroe->setDinero(rupias);
         }else{
           cout << "No tienes el poder suficiente para sacar la (MASTER SWORD)" << '\n';
         }
@@ -215,7 +221,10 @@ int main(int argc, char const *argv[]) {
       break;
       case 6:
       {
-
+        ofstream heroes("Partida.bin",ios::binary);
+        heroe->write(heroes);
+        cout<<"Heroe guardado correctamente"<<endl;
+        heroes.close();
       }
       break;
       case 7:
@@ -225,7 +234,12 @@ int main(int argc, char const *argv[]) {
       break;
       case 8:
       {
-
+        //delete listaMonstrous;
+        delete heroe;
+        delete item1;
+        delete item2;
+        delete item3;
+        std::cout << "Gracias por jugar:" << '\n';
       }
       break;
       default:{

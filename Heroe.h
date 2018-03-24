@@ -2,6 +2,7 @@
 #define HEROE_H
 #include "Item.h"
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -22,6 +23,7 @@ class Heroe{
     void setDJefes(int);
     int getDinero();
     void setDinero(int);
+    void write(ofstream&);
 
 
 };
